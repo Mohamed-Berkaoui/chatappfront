@@ -65,7 +65,7 @@ function ChatRoom({ name, onLeave ,messages,setMessages}) {
           onSubmit={(event) => {event.preventDefault()
             const newmessage={message:event.target.message.value,user:name}
             event.target.message.value=""
-            axios.post('http://localhost:3000/api/messages',newmessage)
+            axios.post('https://chatappback-qneo.onrender.com/api/messages',newmessage)
             .then(res=>setMessages([...messages,newmessage]))
           }}
         >
