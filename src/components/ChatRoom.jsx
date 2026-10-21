@@ -5,7 +5,7 @@ function ChatRoom({ name, onLeave ,messages,setMessages}) {
  console.log(messages)
   useEffect(function () {
     axios
-      .get("http://localhost:3000/api/messages")
+      .get("https://chatappback-qneo.onrender.com/api/messages")
       .then((res) => setMessages(res.data.data))
       .catch((e) => alert(e.message));
   }, []);
